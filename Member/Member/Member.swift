@@ -9,6 +9,7 @@
 import Foundation
 
 public class Member{
+    public init(){ }
     public func login(){
         print("Member.login")
     }

@@ -7,21 +7,37 @@
 //
 
 import Foundation
-//import Member
 
 #if canImport(Member)
     import Member
+#endif
+#if canImport(Billing)
+    import Billing
 #endif
 
 @objc public class TestSDK: NSObject{
     
     @objc public func login(){
         print("TestSDK.login()")
+        
         #if canImport(Member)
-            var member = Member()
-            member.login
+        let member = Member()
+        member.login()
         #else
-            print("Do not find module Member")
+        print("Do not find module Member")
         #endif
+        
+    }
+    
+    @objc public func purchase(){
+        print("TestSDK.purchase()")
+        
+        #if canImport(Billing)
+        let billing = Billing()
+        billing.purchase()
+        #else
+        print("Do not find module Billing")
+        #endif
+        
     }
 }

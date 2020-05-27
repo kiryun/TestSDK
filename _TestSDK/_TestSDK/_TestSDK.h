@@ -24,4 +24,5 @@
     TestSDK*    testSDK;
 }
 - (void) login;
+- (void) purchase;
 @end

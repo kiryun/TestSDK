@@ -29,5 +29,8 @@
 - (void) login{
     [testSDK login];
 }
+- (void) purchase{
+    [testSDK purchase];
+}
 
 @end
